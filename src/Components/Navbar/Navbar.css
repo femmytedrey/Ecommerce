@@ -4,7 +4,7 @@
 .navbar{
     display: flex;
     justify-content: space-around;
-    padding: auto 16px;
+    padding: 16px 4rem;
     box-shadow: 0 1px 3px -2px black;
 }
 
