@@ -8,8 +8,8 @@
 }
 
 .loginsignup-container{
-    width: 580px;
-    height: 600px;
+    min-width: 47%;
+    height: 650px;
     background: white;
     margin: auto;
     padding: 40px 60px;
@@ -62,4 +62,10 @@
 
 .loginsignup-agree{
     display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
 }
