@@ -1,7 +1,8 @@
-.hero{
+/* .hero{
     height: 100vh;
     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
+    align-items: space-between;
 }
 
 .hero-left{
@@ -10,8 +11,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding-left: 6.5rem;
     line-height: 1.1;
+    width: 50%;
+    background: blue;
 }
 
 .hero-left h2{
@@ -49,16 +51,83 @@
     color: white;
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .hero-right{
     flex: 1;
-    display: flex;
     align-items: center;
     justify-content: center;
-
+    background: green;
 }
 
 .hero-right img{
     width: 450px;
+} */
+body .hero{
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+}
+.hero{
+    height: auto;
+    width: 100%;
+    padding: 0px 90px 30px 90px;
+    margin: 0;
+    background: blue;
+}
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    line-height: 1.1;
+    width: 50%;
+}
+
+.hero-left h2{
+    color: #090909;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hero-left p{
+    color: #171717;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero-hand-icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-hand-icon img{
+    width: 4rem;
+}
+
+.hero-latest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+    height: 60px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hero-right{
+    /* background: teal; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    width: 420px;
 }

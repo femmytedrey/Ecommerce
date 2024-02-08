@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+}
+
+.nav-item-container{
+    display: flex;
+}
+
+.brand-logo-box{
+    width: 30%;
+}
+
+.brand-logo{
+    width: 90%;
+}
+
+.right-item{
+    display: flex;
+    align-items: center;
+}
+
+.login-btn{
+    padding: 15px 50px;
+    margin: 10px 20px 10px 0px;
+    border-radius: 40px;
+    background: transparent;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.login-btn:hover{
+    background: black;
+    color: white;
+}
+
+.cart-icon-container{
+    position: relative;
+}
+
+.nav-cart-count{
+    position: absolute;
+    top: 30px;
+    left: 83px;
+}
+
+.nav-link{
+    font-size: 19px;
+}
+
+.nav-item.active {
+    font-weight: 700;
+    color: rgb(255, 98, 0) !important;
+    
+}
+
+
