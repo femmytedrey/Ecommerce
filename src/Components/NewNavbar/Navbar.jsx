@@ -1,7 +1,6 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../Assets/logo.png';
@@ -15,51 +14,40 @@ function Navbar1() {
   };
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container fluid>
-        <Navbar.Brand as={Link} to="/" eventKey="/" className='brand-logo-box'>
-          <img src={logo} alt='logo' className="brand-logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <div className='d-flex justify-content-center align-items-center flex-grow-1'>
-            <Nav className="d-flex">
-              <Nav.Item className={`mx-3 ${isActive('/')}`}>
-                <Link to="/" className="nav-link">
-                  Shop
-                </Link>
-              </Nav.Item>
-              <Nav.Item className={`mx-3 ${isActive('/men')}`}>
-                <Link to="/men" className="nav-link">
-                  Men
-                </Link>
-              </Nav.Item>
-              <Nav.Item className={`mx-3 ${isActive('/women')}`}>
-                <Link to="/women" className="nav-link">
-                    Women 
-                </Link>
-              </Nav.Item>
-              <Nav.Item className={`mx-3 ${isActive('/kids')}`}>
-                <Link to="/kids" className="nav-link">
-                  Kids
-                </Link>
-              </Nav.Item>
-            </Nav>
+    <nav className="navbar navbar-expand-lg fixed-top">
+      <div className="container-fluid">
+        <a className="navbar-brand me-auto" href="#"><img src={logo} alt='logo' className='brand-logo'/></a>
+        
+        <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasNavbarLabel"><img src={logo} alt='logo' className='brand-logo'/></h5>
+            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div className="ms-auto right-item">
-            <Link to='/login'>
-                <button className='login-btn'>Login</button>
-            </Link>
-            {/* <button className='login-btn'>Sign up</button> */}
-            {/* <Button className='btn'>Sign Up</Button> */}
-            <div className='cart-icon-container'>
-              <Link to="/cart"><img src={cart_icon} alt="cart"/></Link>
-              <div className='nav-cart-count'>0</div>
-            </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li className="nav-item">
+                <a className="nav-link active mx-lg-2" aria-current="page" href="#">Shop</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#">Men</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#">Women</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link mx-lg-2" href="#">Kids</a>
+              </li>
+              
+            </ul>
+            
           </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </div>
+        <a href='#' className='login-button'>Login</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
   );
 }
 
