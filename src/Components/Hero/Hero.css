@@ -70,7 +70,7 @@ body .hero{
 .hero{
     height: auto;
     width: 100%;
-    padding: 0px 90px 30px 90px;
+    padding: 90px 90px 30px 90px;
     margin: 0;
     background: blue;
 }
